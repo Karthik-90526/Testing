@@ -8,7 +8,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(helmet());
 app.use(cors());
 const port =process.env.port || 3000
-app.post('/blogs',(req,res)=>{
+app.post('/',(req,res)=>{
 Blog.create(req.body).then((blog)=>{
 res.status(201).send(blog);
 })
